@@ -85,8 +85,8 @@ for(let i = 0; i < totalCells;i++)
 
 }
 
-const arrayCelleSenzaBombe = document.querySelectorAll('.bg-azzurro');
-if( arrayCelleSenzaBombe.length == (totalCells - 16))
+const arrayCelleSenzaBombe = document.querySelectorAll('.bg-azzurro');  //array degli elementi html a cui è associata la classe .bg-azzurro
+if( arrayCelleSenzaBombe.length == (totalCells - 16))   //se la lunghezza dell'array è uguale al n° totale delle celle della griglia meno il n° di celle contenenti le bombe allora l'utente vince
 {
     alert('Complimenti hai vinto!!!');
     griglia.style.pointerEvents = 'none';
