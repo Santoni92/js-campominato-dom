@@ -78,7 +78,7 @@ for(let i = 0; i < totalCells;i++)
             }
 
         }
-        const arraCelleConBombe = document.querySelectorAll('.bg-red')
+        const arrayCelleConBombe = document.querySelectorAll('.bg-red')
         const arrayCelleSenzaBombe = document.querySelectorAll('.bg-azzurro');   //array degli elementi html a cui è associata la classe .bg-azzurro
         if( arrayCelleSenzaBombe.length == (totalCells - 16))   //se la lunghezza dell'array è uguale al n° totale delle celle della griglia meno il n° di celle contenenti le bombe allora l'utente vince
         {
@@ -86,7 +86,7 @@ for(let i = 0; i < totalCells;i++)
             griglia.style.pointerEvents = 'none';
 
         }else{
-            console.log(`Il tuo punteggio risulta essere di: ${arrayCelleSenzaBombe.length - arraCelleConBombe.length}`);
+            console.log(`Il tuo punteggio risulta essere di: ${arrayCelleSenzaBombe.length - arrayCelleConBombe.length}`);
         }
         
        
