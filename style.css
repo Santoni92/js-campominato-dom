@@ -48,3 +48,8 @@ body {
   height: calc(100% / 7);
   border: 2px dashed black;
 }
+
+/*classi che utilizzo per l'esercizio del campo minato*/
+.red {
+  background-color: red;
+}
