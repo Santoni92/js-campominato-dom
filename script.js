@@ -85,8 +85,10 @@ for(let i = 0; i < totalCells;i++)
             alert("Complimenti hai vinto!!! ");
             griglia.style.pointerEvents = 'none';
 
+        }else{
+            console.log(`Il tuo punteggio risulta essere di: ${arrayCelleSenzaBombe.length - arraCelleConBombe.length}`);
         }
-        console.log(`Il tuo punteggio risulta essere di: ${arrayCelleSenzaBombe.length - arraCelleConBombe.length}`);
+        
        
     });
 
