@@ -70,8 +70,8 @@ for(let i = 0; i < totalCells;i++)
             if(cell.innerText == arrayDelleBombe[i])
             {
                 cell.classList.add('red');
-                griglia.style.pointerEvents = 'none';
-                alert('Hai perso!!!');
+                //griglia.style.pointerEvents = 'none';
+                //alert('Hai perso!!!');
             }
             else{
                 cell.classList.add('bg-azzurro');
@@ -81,15 +81,17 @@ for(let i = 0; i < totalCells;i++)
        
     });
 
-
-
-
     griglia.appendChild(cell); //appendo il div appena creato che rappresenta la singola cella della griglia nel div che rappresenta la griglia stessa
 
 }
 
+const arrayCelleSenzaBombe = document.querySelectorAll('.bg-azzurro');
+if( arrayCelleSenzaBombe.length == (totalCells - 16))
+{
+    alert('Complimenti hai vinto!!!');
+    griglia.style.pointerEvents = 'none';
 
-
+}
 
 
 /*******************************************Implementazione delle funzioni**************************************/
