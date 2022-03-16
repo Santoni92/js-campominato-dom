@@ -69,31 +69,30 @@ for(let i = 0; i < totalCells;i++)
         {
             if(cell.innerText == arrayDelleBombe[i])
             {
-                cell.classList.add('red');
-                //griglia.style.pointerEvents = 'none';
-                //alert('Hai perso!!!');
+                cell.classList.add('bg-red');
+                griglia.style.pointerEvents = 'none';
+                alert("Hai perso!!!");
             }
             else{
                 cell.classList.add('bg-azzurro');
             }
 
         }
+        const arraCelleConBombe = document.querySelectorAll('.bg-red')
+        const arrayCelleSenzaBombe = document.querySelectorAll('.bg-azzurro');   //array degli elementi html a cui è associata la classe .bg-azzurro
+        if( arrayCelleSenzaBombe.length == (totalCells - 16))   //se la lunghezza dell'array è uguale al n° totale delle celle della griglia meno il n° di celle contenenti le bombe allora l'utente vince
+        {
+            alert("Complimenti hai vinto!!! ");
+            griglia.style.pointerEvents = 'none';
+
+        }
+        console.log(`Il tuo punteggio risulta essere di: ${arrayCelleSenzaBombe.length - arraCelleConBombe.length}`);
        
     });
 
     griglia.appendChild(cell); //appendo il div appena creato che rappresenta la singola cella della griglia nel div che rappresenta la griglia stessa
 
 }
-
-
-const arrayCelleSenzaBombe = document.querySelectorAll('.bg-azzurro');  //array degli elementi html a cui è associata la classe .bg-azzurro
-if( arrayCelleSenzaBombe.length == (totalCells - 16))   //se la lunghezza dell'array è uguale al n° totale delle celle della griglia meno il n° di celle contenenti le bombe allora l'utente vince
-{
-    alert('Complimenti hai vinto!!!');
-    griglia.style.pointerEvents = 'none';
-
-}
-
 
 /*******************************************Implementazione delle funzioni**************************************/
 
