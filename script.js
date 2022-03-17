@@ -72,6 +72,7 @@ for(let i = 0; i < totalCells;i++)
                 cell.classList.add('bg-red');
                 griglia.style.pointerEvents = 'none';
                 alert("Hai perso!!!");
+                mostraBombeNascoste(arrayDelleBombe);   //richiamo la funzione che mostra tutte le bombe presenti nella griglia
             }
             else{
                 cell.classList.add('bg-azzurro');
@@ -95,6 +96,7 @@ for(let i = 0; i < totalCells;i++)
     griglia.appendChild(cell); //appendo il div appena creato che rappresenta la singola cella della griglia nel div che rappresenta la griglia stessa
 
 }
+
 
 /*******************************************Implementazione delle funzioni**************************************/
 
@@ -136,4 +138,16 @@ function generaBombe(max)
         }
     }
     return arrayDelleBombe; //ritorno l'array delle bombe
+}
+
+/*funzione che mostra tutte le celle (i div) con le bombe presenti nella griglia */
+function mostraBombeNascoste(arrayDelleBombe)
+{
+    const allCells = document.querySelectorAll('.cell');
+    for (let i = 0; i < allCells.length; i++){
+        if (arrayDelleBombe.includes(i+1)){
+            const bombCell = allCells[i];
+            bombCell.classList.add('bg-red');
+        }
+    }
 }

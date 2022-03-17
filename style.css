@@ -22,6 +22,7 @@ body {
   width: calc(100% / 10);
   height: calc(100% / 10);
   border: 2px dashed black;
+  text-align: center;
 }
 
 /*classe che aggiungo alla singola cella solo nel momento in cui l'utente clicca su quella determinata cella*/
@@ -35,18 +36,21 @@ body {
   width: calc(100% / 10);
   height: calc(100% / 10);
   border: 2px dashed black;
+  text-align: center;
 }
 
 .cell-2 {
   width: calc(100% / 9);
   height: calc(100% / 9);
   border: 2px dashed black;
+  text-align: center;
 }
 
 .cell-3 {
   width: calc(100% / 7);
   height: calc(100% / 7);
   border: 2px dashed black;
+  text-align: center;
 }
 
 /*classi che utilizzo per l'esercizio del campo minato*/
