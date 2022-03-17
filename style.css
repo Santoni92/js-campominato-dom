@@ -15,6 +15,7 @@ body {
   background-color: bisque;
   display: flex;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 
 /*classe da associare a ciascun singolo div creato col js*/
